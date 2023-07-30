@@ -45,24 +45,6 @@ p {
     margin-top: 0;
 }
 
-@media only screen and (min-width: 1024px) {
-    body {
-        font-size: 1.8rem;
-    }
-
-    h1 {
-        font-size: 8rem;
-    }
-
-    h2 {
-        font-size: 4rem;
-    }
-
-    h3 {
-        font-size: 2.4rem;
-    }
-}
-
 /* LINKS SECTION */
 
 a {
@@ -89,8 +71,61 @@ a {
     transform: translate(5px, 0);
 }
 
+/* BADGES SECTION */
+
+.badge {
+    border-radius: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+    white-space: nowrap;
+}
+
+.badge--primary {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.badge--secondary {
+    background-color: var(--color-secondary);
+    color: #fff;
+}
+
+.badge--small {
+    font-size: 1rem;
+}
+
+/* BREAKPOINTS */
+
 @media only screen and (min-width: 1024px) {
+    /* TYPOGRAPHY SECTION */
+    body {
+        font-size: 1.8rem;
+    }
+
+    h1 {
+        font-size: 8rem;
+    }
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    h3 {
+        font-size: 2.4rem;
+    }
+
+    /* LINKS SECTION */
     .link-arrow {
         font-size: 1.5rem;
+    }
+
+    /* BADGES SECION */
+    .badge {
+        font-size: 1.5rem;
+    }
+
+    .badge--small {
+        font-size: 1.6rem;
     }
 }
