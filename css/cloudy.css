@@ -8,7 +8,12 @@
     --color-body: #918ca4;
 }
 
-/* TYPOGRAPHY SECTION */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* TYPOGRAPHY */
+
 
 html {
     /* 62.5% of 16px = 10px */
@@ -45,7 +50,7 @@ p {
     margin-top: 0;
 }
 
-/* LINKS SECTION */
+/* LINKS */
 
 a {
     text-decoration: none;
@@ -71,7 +76,7 @@ a {
     transform: translate(5px, 0);
 }
 
-/* BADGES SECTION */
+/* BADGES */
 
 .badge {
     border-radius: 20px;
@@ -95,10 +100,113 @@ a {
     font-size: 1rem;
 }
 
+/* LISTS */
+
+.list {
+    list-style: none;
+    padding-left: 0;
+    color: var(--color-heading);
+}
+
+.list__inline .list__item {
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+.list--tick {
+    list-style: url(../assets/tick.svg);
+    padding-left: 3rem;
+}
+
+.list--tick .list__item {
+    padding-left: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* ICONS */
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+.icon--primary {
+    fill: var(--color-primary);
+}
+
+.icon-container {
+    background-color: #f3f9fa;
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* BUTTONS */
+
+.btn {
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    padding: 2rem 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.btn--primary {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.btn--primary:hover {
+    background-color: #3a8ffd;
+}
+
+.btn--secondary {
+    background-color: var(--color-secondary);
+    color: #fff;
+}
+
+.btn--secondary:hover {
+    background-color: #00c8eb;
+}
+
+.btn--accent {
+    background-color: var(--color-accent);
+    color: #fff;
+}
+
+.btn--accent:hover {
+    background-color: #ec3000;
+}
+
+.btn--block {
+    width: 100%;
+    display: inline-block;
+}
+
+.btn--outline {
+    background-color: #fff;
+    color: var(--color-heading);
+    border: 2px solid var(--color-heading);
+    transition: background-color 0.15s ease;
+}
+
+.btn--outline:hover {
+    background-color: var(--color-heading);
+    color: #fff;
+}
+
 /* BREAKPOINTS */
 
 @media only screen and (min-width: 1024px) {
-    /* TYPOGRAPHY SECTION */
+    /* TYPOGRAPHY */
     body {
         font-size: 1.8rem;
     }
@@ -115,17 +223,27 @@ a {
         font-size: 2.4rem;
     }
 
-    /* LINKS SECTION */
+    /* LINKS */
     .link-arrow {
         font-size: 1.5rem;
     }
 
-    /* BADGES SECION */
+    /* BADGES */
     .badge {
         font-size: 1.5rem;
     }
 
     .badge--small {
         font-size: 1.6rem;
+    }
+
+    /* LISTS */
+    .list--tick .list__item {
+        padding-left: 0;
+    }
+
+    /* BUTTONS */
+    .btn {
+        font-size: 1.5rem;
     }
 }
