@@ -356,6 +356,12 @@ a {
     bottom: 10px;
   }
 
+  /* GRID */
+  .grid {
+    display: grid;
+
+  }
+
 
 /* BREAKPOINTS */
 
@@ -435,4 +441,16 @@ a {
       .quote__organization {
         font-size: 1.6rem;
       }
+
+      /* GRIDS */
+      .grid--1x3 {
+        grid-template: 1fr / repeat(3, 1fr);
+      }
+}
+
+@media only screen and (min-width: 768px) {
+    /* GRIDS */
+    .grid--1x2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
